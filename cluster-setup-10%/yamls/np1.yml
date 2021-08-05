@@ -1,0 +1,9 @@
+kind: Pod
+metadata:
+  name: np-pod1
+  namespace: np
+  label:
+    play: np
+spec:
+  container:
+    image: nginx

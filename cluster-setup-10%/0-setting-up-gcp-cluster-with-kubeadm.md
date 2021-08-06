@@ -53,6 +53,7 @@ Use script from [killer.sh](https://itnext.io/cks-exam-series-1-create-cluster-s
 - Access the Nginx on the <NodePort-Public-IP>:<NodePort-Port>. Pay attention that the port is not the service's, ie, it's not 80 but in the 30000's range.
 
 ## Expose Kube Apiserver and access to it with local Kubectl 
+(This section was automated with the script `start-cluster-update-kubectl.sh`. Run it with `source` instead of `sh` to preserve KUBECONFIG)
 - The kube apiserver should already be exposed on <NodePort-Public-IP>:6443
 - Update kubeadm configs adding a *Subject Alternative Names* option with the public ip:
   - first remove the apiserver cert and key `rm /etc/kubernetes/pki/apiserver.{crt,key}`

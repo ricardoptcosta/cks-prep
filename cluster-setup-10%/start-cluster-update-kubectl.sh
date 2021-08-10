@@ -34,5 +34,5 @@ master_private_ip=$(gcloud compute instances describe ${master_node} \
 sed -i "s/${master_private_ip}/${master_public_ip}/" ${kubeconfig_file}
 
 # Set KUBECONFIG env var, in case it's not set
-KUBECONFIG=${kubeconfig_file}
+export KUBECONFIG=${kubeconfig_file}
 
